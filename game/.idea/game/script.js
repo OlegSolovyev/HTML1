@@ -28,8 +28,10 @@ document.body.appendChild(canvas)
 
 hero.x=canvas.width/2;
 hero.y=canvas.height/2;
+// edited
 hero.speed = 1;
 
+// edited
 monster.x=monster.image.width +(Math.random() * (canvas.width-(monster.image.width*3)));
 monster.y=monster.image.height +(Math.random() * (canvas.height-(monster.image.height*3)));
 
@@ -37,6 +39,7 @@ const ctx = canvas.getContext('2d');
 
 ctx.drawImage(background.image,0,0);
 
+// edited
 window.addEventListener('keydown', (event) => {
     console.log(event)
     if (event.key == "w" ){
@@ -63,26 +66,32 @@ window.addEventListener('keyup', (event) => {
     console.log(event);
 });
 
+// edited
 const moveUp = function (){
     hero.y -= hero.speed;
 }
 
+// edited
 const moveDown = function (){
     hero.y += hero.speed;
 }
 
+// edited
 const moveLeft = function (){
     hero.x -= hero.speed;
 }
 
+// edited
 const moveRight = function (){
     hero.x += hero.speed;
 }
 
+// edited
 const speedUp = function (){
     hero.speed += 1;
 }
 
+// edited
 const speedDown = function (){
     if (this.speed>1) {
         hero.speed -= 1;
